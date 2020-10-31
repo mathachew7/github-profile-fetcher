@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/github-profile-fetcher/static/css/main.e9899149.chunk.css",
+    "main.js": "/github-profile-fetcher/static/js/main.251d7ec1.chunk.js",
+    "main.js.map": "/github-profile-fetcher/static/js/main.251d7ec1.chunk.js.map",
+    "runtime-main.js": "/github-profile-fetcher/static/js/runtime-main.6bc9e03c.js",
+    "runtime-main.js.map": "/github-profile-fetcher/static/js/runtime-main.6bc9e03c.js.map",
+    "static/js/2.7c1ac179.chunk.js": "/github-profile-fetcher/static/js/2.7c1ac179.chunk.js",
+    "static/js/2.7c1ac179.chunk.js.map": "/github-profile-fetcher/static/js/2.7c1ac179.chunk.js.map",
+    "index.html": "/github-profile-fetcher/index.html",
+    "static/css/main.e9899149.chunk.css.map": "/github-profile-fetcher/static/css/main.e9899149.chunk.css.map",
+    "static/js/2.7c1ac179.chunk.js.LICENSE.txt": "/github-profile-fetcher/static/js/2.7c1ac179.chunk.js.LICENSE.txt",
+    "static/media/octocat.82c54c84.svg": "/github-profile-fetcher/static/media/octocat.82c54c84.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6bc9e03c.js",
+    "static/js/2.7c1ac179.chunk.js",
+    "static/css/main.e9899149.chunk.css",
+    "static/js/main.251d7ec1.chunk.js"
+  ]
+}
