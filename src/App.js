@@ -1,25 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Banner from "./components/banner/banner";
+import SearchBox from "./components/search-box/search-box";
+import Card from "./components/card/card";
+import Footer from "./components/footer/Footer";
+import "./App.css"
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      searchName: "",
+      userData: "",
+    };
+  }
+
+  onInputChange = (event) => {
+    this.setState({ searchName: event.target.value }, () => {
+      this.getData(this.state.searchName);
+    });
+  };
+
+  getData = (userName) => {
+    fetch(`https://api.github.com/users/${userName}`)
+      .then((res) => res.json())
+      .then((data) => this.setState({ userData: data }))
+      .catch((error) => {
+        alert("Oops! Could not reach GitHub");
+        console.log("Oops! We have an error", error);
+      });
+  };
+
+  render() {
+    return (
+      <Fragment>
+        <Banner />
+       
+        <SearchBox onInputChange={this.onInputChange} />
+          
+          
+          {this.state.userData.id && this.state.searchName !== "" ? (
+          <Card profile={this.state.userData} />
+        ) : (
+          <div className="no-data">
+            Above Username doesn't associated with any GitHub Profile. <br />
+          </div>
+        )}
+         
+        
+       <Footer />
+      </Fragment>
+    );
+  }
 }
 
 export default App;
